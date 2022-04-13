@@ -15,12 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Test.h">
+    <ClInclude Include="src\Pizza\Core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Test.cpp">
+    <ClCompile Include="src\Pizza\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
