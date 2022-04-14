@@ -4,6 +4,9 @@
     <Filter Include="Pizza">
       <UniqueIdentifier>{5353E20D-BF67-0ABF-88E9-AD1EF4BC06F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pizza\Events">
+      <UniqueIdentifier>{D7A37418-C306-04BD-6C8C-3C7358CECF3F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pizza.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Pizza\EntryPoint.h">
       <Filter>Pizza</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\Events\ApplicationEvent.h">
+      <Filter>Pizza\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\Events\Event.h">
+      <Filter>Pizza\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\Events\KeyEvent.h">
+      <Filter>Pizza\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pizza\Events\MouseEvent.h">
+      <Filter>Pizza\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pizza\Log.h">
       <Filter>Pizza</Filter>
