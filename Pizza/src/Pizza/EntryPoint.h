@@ -8,17 +8,20 @@ extern Pizza::Application* Pizza::CreateApplication();
 int main(int argc, char** argv)
 {
 	Pizza::Log::Init();
-	PZ_CORE_WARN("Initialized Log!");
+	PZ_CORE_TRACE("Initialized Log!");
 
 	int a = 5;
 	PZ_INFO("Hello! Var={0}", a);
 
+	// Let the actual project to implement the CreateApplication() and return the app*
 	auto app = Pizza::CreateApplication();
 
 	app->Run();
 
+	// While the app finished running, release the memory
 	delete app;
 }
-
+#else
+	#error Pizza Engine only support Windows 64-bit for now
 #endif
 
