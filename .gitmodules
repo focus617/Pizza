@@ -1,0 +1,3 @@
+[submodule "Pizza/vendor/spdlog"]
+	path = Pizza/vendor/spdlog
+	url = https://github.com/gabime/spdlog
