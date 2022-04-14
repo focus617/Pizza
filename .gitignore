@@ -369,3 +369,4 @@ FodyWeavers.xsd
 /bin-int/Debug-windows-x86_64/Pizza/Pizza.dll.recipe
 /bin-int/Debug-windows-x86_64/Sandbox/Sandbox.tlog
 *.recipe
+*.txt

@@ -13,10 +13,13 @@ project "Pizza"
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "pzpch.h"
+	pchsource "Pizza/src/pzpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp" 
 	}
 
 	includedirs

@@ -1,3 +1,4 @@
+#include "pzpch.h"
 #include "Application.h"
 
 #include "Pizza/Events/ApplicationEvent.h"
