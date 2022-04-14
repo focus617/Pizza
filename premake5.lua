@@ -1,6 +1,6 @@
 workspace "Pizza"
 	architecture "x64"
-	startproject "Sandbox" 
+
 	configurations { "Debug", "Release", "Dist"}
 
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -21,6 +21,7 @@ project "Pizza"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
