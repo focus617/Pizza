@@ -9,10 +9,11 @@ workspace "Pizza"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pizza/vendor/GLFW/include"
+IncludeDir["Glad"] = "Pizza/vendor/Glad/include"
 
 -- Include submodule's premake file
 include "Pizza/vendor/GLFW"
-
+include "Pizza/vendor/Glad"
 
 project "Pizza"
     location "Pizza"
@@ -35,12 +36,14 @@ project "Pizza"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links 
     { 
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -52,7 +55,8 @@ project "Pizza"
         defines
         {
             "PZ_PLATFORM_WINDOWS",
-            "PZ_BUILD_DLL"
+            "PZ_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

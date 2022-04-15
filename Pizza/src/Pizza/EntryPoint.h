@@ -10,9 +10,6 @@ int main(int argc, char** argv)
 	Pizza::Log::Init();
 	PZ_CORE_TRACE("Initialized Log!");
 
-	int a = 5;
-	PZ_INFO("Hello! Var={0}", a);
-
 	// Let the actual project to implement the CreateApplication() and return the app*
 	auto app = Pizza::CreateApplication();
 

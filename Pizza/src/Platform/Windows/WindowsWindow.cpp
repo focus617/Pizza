@@ -5,6 +5,8 @@
 #include "Pizza/Events/MouseEvent.h"
 #include "Pizza/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+
 namespace Pizza {
 
     // To ensure that GLFW only can be initialized once
@@ -54,6 +56,9 @@ namespace Pizza {
         //将一个glfwWindow设置为当前上下文，一个thread同时只能拥有一个上下文，
         //这省去了一些函数每次都指定window的麻烦，像glfwSwapInterval()这样的函数只操作当前Context
         glfwMakeContextCurrent(m_Window);
+
+        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        PZ_CORE_ASSERT(status, "Failed to initialize Glad!");
 
         //本质上是绑定了一个用户自定义的指针到window，签名里是个void*，根据文档，这就是
         //一个用户自己爱干嘛干嘛的入口，glfw本身不会对这个指针做任何操作，我们可以把对应的
