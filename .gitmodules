@@ -1,3 +1,6 @@
 [submodule "Pizza/vendor/spdlog"]
 	path = Pizza/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Pizza/vendor/GLFW"]
+	path = Pizza/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
