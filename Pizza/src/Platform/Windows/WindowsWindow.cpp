@@ -7,6 +7,7 @@
 
 namespace Pizza {
 
+    // To ensure that GLFW only can be initialized once
     static bool s_GLFWInitialized = false;
 
     static void GLFWErrorCallback(int error, const char* description)
@@ -38,6 +39,7 @@ namespace Pizza {
 
         PZ_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+        // Make sure to initialize GLFW only once, along with the first window
         if (!s_GLFWInitialized)
         {
             // TODO: glfwTerminate on system shutdown
@@ -48,7 +50,14 @@ namespace Pizza {
         }
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+        
+        //将一个glfwWindow设置为当前上下文，一个thread同时只能拥有一个上下文，
+        //这省去了一些函数每次都指定window的麻烦，像glfwSwapInterval()这样的函数只操作当前Context
         glfwMakeContextCurrent(m_Window);
+
+        //本质上是绑定了一个用户自定义的指针到window，签名里是个void*，根据文档，这就是
+        //一个用户自己爱干嘛干嘛的入口，glfw本身不会对这个指针做任何操作，我们可以把对应的
+        //信息传进去
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 
@@ -142,12 +151,22 @@ namespace Pizza {
 
     void WindowsWindow::OnUpdate()
     {
+        //每次update时，处理当前在队列中的事件
         glfwPollEvents();
+
+        //Swap是指把Framebuffer后台帧换到前台，把Framebuffer当前帧换到后台，
+        //从而达到刷新下一帧的目的
         glfwSwapBuffers(m_Window);
     }
 
     void WindowsWindow::SetVSync(bool enabled)
     {
+        // If w/out brace, only 1 closest line will be executed
+        // 这里的1/0并不是开/关的意思，而是下一帧Swap之间要等多少次Screen Update。。。
+        // 但是glfwSwapInterval内部封装了对应平台的vsync函数，所以基本上就是开关的意思。。。
+        // 要注意的是，我们可以把这个interval开成10，然后视窗看起来会巨卡，但依然VSync on
+        // 可见，VSync跟实际渲染的帧数没有任何关系，VSync看似锁60帧只是因为大部分显示器
+        // 刷新率60HZ，被“Sync”了
         if (enabled)
             glfwSwapInterval(1);
         else

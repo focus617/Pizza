@@ -62,14 +62,17 @@ project "Pizza"
 
     filter "configurations:Debug"
         defines "PZ_DEBUG"
+        buildoptions "/MDd"
         optimize "On"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 
@@ -111,12 +114,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "PZ_DEBUG"
+        buildoptions "/MDd"
         optimize "On"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
+        buildoptions "/MD"
         optimize "On"
