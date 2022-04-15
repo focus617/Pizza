@@ -162,11 +162,14 @@
     <ClInclude Include="src\Pizza\Events\KeyEvent.h" />
     <ClInclude Include="src\Pizza\Events\MouseEvent.h" />
     <ClInclude Include="src\Pizza\Log.h" />
+    <ClInclude Include="src\Pizza\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pizza\Application.cpp" />
     <ClCompile Include="src\Pizza\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pzpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
