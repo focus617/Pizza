@@ -5,6 +5,8 @@
 #include "Pizza/Layer.h"
 #include "Pizza/Log.h"
 
+#include "Pizza/ImGui/ImGuiLayer.h"
+
 // ---------Entry Point----------------
 #include "Pizza/EntryPoint.h"
 

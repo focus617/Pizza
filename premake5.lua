@@ -10,10 +10,12 @@ workspace "Pizza"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pizza/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pizza/vendor/Glad/include"
+IncludeDir["ImGui"] = "Pizza/vendor/imgui"
 
 -- Include submodule's premake file
 include "Pizza/vendor/GLFW"
 include "Pizza/vendor/Glad"
+include "Pizza/vendor/imgui"
 
 project "Pizza"
     location "Pizza"
@@ -37,13 +39,15 @@ project "Pizza"
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links 
     { 
         "GLFW",
         "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 

@@ -7,6 +7,9 @@
     <Filter Include="Pizza\Events">
       <UniqueIdentifier>{D7A37418-C306-04BD-6C8C-3C7358CECF3F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pizza\ImGui">
+      <UniqueIdentifier>{BDBA3EF9-2970-B7EE-B264-B1C51E19AEF2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +40,9 @@
     <ClInclude Include="src\Pizza\Events\MouseEvent.h">
       <Filter>Pizza\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pizza\ImGui\ImGuiLayer.h">
+      <Filter>Pizza\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pizza\Layer.h">
       <Filter>Pizza</Filter>
     </ClInclude>
@@ -53,10 +59,14 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pzpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pizza\Application.cpp">
       <Filter>Pizza</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pizza\ImGui\ImGuiLayer.cpp">
+      <Filter>Pizza\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Pizza\Layer.cpp">
       <Filter>Pizza</Filter>
@@ -71,5 +81,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pzpch.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
