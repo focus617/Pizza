@@ -361,16 +361,18 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/bin-int/Debug-x64/Pizza/Pizza.tlog
-/bin-int/Debug-x64/Pizza
-/bin-int/Debug-x64/Sandbox/Sandbox.tlog
-/bin-int/Debug-x64/Sandbox
-/bin-int/Debug-windows-x86_64/Pizza/Pizza.tlog
-/bin-int/Debug-windows-x86_64/Pizza/Pizza.dll.recipe
-/bin-int/Debug-windows-x86_64/Sandbox/Sandbox.tlog
+
+# Directories
+.vs/
+bin/
+bin-int/
+
+# Files
+*.user
 *.recipe
 *.txt
 *.idb
+*.sin
 *.vcxproj
 *.filters
 

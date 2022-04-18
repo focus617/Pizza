@@ -4,6 +4,6 @@
 [submodule "Pizza/vendor/GLFW"]
 	path = Pizza/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
-[submodule "Pizz/vendor/imgui"]
-	path = Pizz/vendor/imgui
+[submodule "Pizza/vendor/imgui"]
+	path = Pizza/vendor/imgui
 	url = https://github.com/reforia/imgui
