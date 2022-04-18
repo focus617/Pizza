@@ -366,13 +366,16 @@ FodyWeavers.xsd
 .vs/
 bin/
 bin-int/
+/Pizza/vendor/imgui
 
 # Files
 *.user
 *.recipe
 *.txt
 *.idb
-*.sin
+*.sln
 *.vcxproj
 *.filters
+
+
 
