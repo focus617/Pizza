@@ -88,7 +88,7 @@ namespace Pizza {
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui::NewFrame();
 
-		// 默认创建一个包含了几乎所有功能的Window，很明显这里做在OnUpdate里并不是很好
+		// 默认创建一个包含了几乎所有功能的Window，很明显这里做OnUpdate并不是很好
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
 
