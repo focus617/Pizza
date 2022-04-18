@@ -11,6 +11,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Pizza/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pizza/vendor/Glad/include"
 IncludeDir["ImGui"] = "Pizza/vendor/imgui"
+IncludeDir["glm"] = "Pizza/vendor/glm"
 
 -- Include submodule's premake file
 include "Pizza/vendor/GLFW"
@@ -33,7 +34,9 @@ project "Pizza"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp" 
+        "%{prj.name}/src/**.cpp" ,
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
     }
 
     	defines
@@ -47,7 +50,8 @@ project "Pizza"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
     }
 
     links 
@@ -103,7 +107,8 @@ project "Sandbox"
     includedirs
     {
         "Pizza/vendor/spdlog/include",
-        "Pizza/src"
+        "Pizza/src",
+		"%{IncludeDir.glm}"
     }
 
     links

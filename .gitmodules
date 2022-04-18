@@ -7,3 +7,6 @@
 [submodule "Pizza/vendor/imgui"]
 	path = Pizza/vendor/imgui
 	url = https://github.com/reforia/imgui
+[submodule "Pizza/vendor/glm"]
+	path = Pizza/vendor/glm
+	url = https://github.com/g-truc/glm
