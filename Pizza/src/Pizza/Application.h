@@ -7,6 +7,8 @@
 #include "Pizza/Events/Event.h"
 #include "Pizza/Events/ApplicationEvent.h"
 
+#include "Pizza/ImGui/ImGuiLayer.h"
+
 namespace Pizza {
 
 	class PIZZA_API Application
@@ -30,6 +32,7 @@ namespace Pizza {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

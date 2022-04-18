@@ -113,6 +113,7 @@ project "Sandbox"
     {
         "Pizza/vendor/spdlog/include",
         "Pizza/src",
+        "Pizza/vendor",
 		"%{IncludeDir.glm}"
     }
 

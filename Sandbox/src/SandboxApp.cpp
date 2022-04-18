@@ -1,5 +1,11 @@
 #include <Pizza.h>
 
+#include "imgui/imgui.h"
+
+#include "Pizza/Events/ApplicationEvent.h"
+#include "Pizza/Events/KeyEvent.h"
+#include "Pizza/Events/MouseEvent.h"
+
 class ExampleLayer : public Pizza::Layer
 {
 public:
@@ -12,6 +18,13 @@ public:
     {
         if (Pizza::Input::IsKeyPressed(PZ_KEY_TAB))
             PZ_TRACE("Tab key is pressed (poll)!");
+    }
+
+    virtual void OnImGuiRender() override
+    {
+        ImGui::Begin("Test");
+        ImGui::Text("Hello World");
+        ImGui::End();
     }
 
     void OnEvent(Pizza::Event& event) override
@@ -33,7 +46,6 @@ public:
     Sandbox()
     {
         PushLayer(new ExampleLayer());
-        PushOverlay(new Pizza::ImGuiLayer());
     }
 
     ~Sandbox()
