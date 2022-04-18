@@ -1,14 +1,10 @@
 workspace "Pizza"
     architecture "x64"
-    startproject "Sandbox"
 
-    configurations { 
-        "Debug",
-        "Release",
-        "Dist"
-    }
+    configurations { "Debug", "Release", "Dist"}
 
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
@@ -23,9 +19,10 @@ include "Pizza/vendor/imgui"
 
 project "Pizza"
     location "Pizza"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+	staticruntime "on"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -38,6 +35,11 @@ project "Pizza"
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp" 
     }
+
+    	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
+	}
 
     includedirs
     {
@@ -57,7 +59,6 @@ project "Pizza"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
 
         defines
@@ -67,32 +68,28 @@ project "Pizza"
 			"GLFW_INCLUDE_NONE"
         }
 
-        postbuildcommands
-        {
-            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-        }
-
     filter "configurations:Debug"
         defines "PZ_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
-    staticruntime "off"
+	cppdialect "C++17"
+	staticruntime "on"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -115,8 +112,6 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines
@@ -128,14 +123,14 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "PZ_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
