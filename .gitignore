@@ -370,3 +370,7 @@ FodyWeavers.xsd
 /bin-int/Debug-windows-x86_64/Sandbox/Sandbox.tlog
 *.recipe
 *.txt
+*.idb
+*.vcxproj
+*.filters
+

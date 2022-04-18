@@ -21,6 +21,7 @@ project "Pizza"
     location "Pizza"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -53,7 +54,6 @@ project "Pizza"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines
@@ -70,17 +70,17 @@ project "Pizza"
 
     filter "configurations:Debug"
         defines "PZ_DEBUG"
-        buildoptions "/MDd"
-        optimize "On"
+        runtime "Debug"
+        symbols "On"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
 
@@ -88,6 +88,7 @@ project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
 
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -122,15 +123,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "PZ_DEBUG"
-        buildoptions "/MDd"
-        optimize "On"
+        runtime "Debug"
+        symbols "On"
 
     filter "configurations:Release"
         defines "PZ_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "PZ_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
