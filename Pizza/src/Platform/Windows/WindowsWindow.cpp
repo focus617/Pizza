@@ -60,6 +60,8 @@ namespace Pizza {
         int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
         PZ_CORE_ASSERT(status, "Failed to initialize Glad!");
 
+        PZ_CORE_INFO("openGL version: {0}", glGetString(GL_VERSION));
+
         //本质上是绑定了一个用户自定义的指针到window，签名里是个void*，根据文档，这就是
         //一个用户自己爱干嘛干嘛的入口，glfw本身不会对这个指针做任何操作，我们可以把对应的
         //信息传进去
