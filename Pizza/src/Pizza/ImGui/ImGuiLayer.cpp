@@ -52,6 +52,7 @@ namespace Pizza {
 		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
 	
 		// Setup Platform/Renderer bindings
+		// 用GLFW的库，来监听例如按键输入，鼠标输入之类的事件
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init("#version 410");
 	}
@@ -65,8 +66,12 @@ namespace Pizza {
 
 	void ImGuiLayer::Begin()
 	{
+		// 创建VertexArray，Shader，Buffer，Attributes等一系列渲染相关的必要Device Object
 		ImGui_ImplOpenGL3_NewFrame();
+		// 设定视窗大小，当前DeltaTime，更新鼠标位置，鼠标按键，鼠标光标，更新手柄事件等IO相关的行为
 		ImGui_ImplGlfw_NewFrame();
+		// 处理包括视窗，渲染帧，IO，FPS，DeltaTime，字体，拖曳，鼠标悬停，视窗及渲染数据读写，
+		// 垃圾回收等一系列的行为
 		ImGui::NewFrame();
 	}
 

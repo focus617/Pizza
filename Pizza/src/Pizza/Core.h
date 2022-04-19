@@ -1,10 +1,14 @@
 #pragma once
 
 #ifdef PZ_PLATFORM_WINDOWS
-	#ifdef PZ_BUILD_DLL
-		#define PIZZA_API __declspec(dllexport)
+	#if PZ_DYNAMIC_LINK
+		#ifdef PZ_BUILD_DLL
+			#define PIZZA_API __declspec(dllexport)
+		#else
+			#define PIZZA_API __declspec(dllimport)
+		#endif
 	#else
-		#define PIZZA_API __declspec(dllimport)
+		#define PIZZA_API
 	#endif
 #else
 	#error Pizza only supports Windows!

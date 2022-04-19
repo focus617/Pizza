@@ -5,6 +5,8 @@
 
 #include <glad/glad.h>
 
+#include "Pizza/Input.h"
+
 namespace Pizza {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
@@ -57,6 +59,7 @@ namespace Pizza {
             glClearColor(0, 0, 0, 1);
             glClear(GL_COLOR_BUFFER_BIT);
 
+            // Update Objects Based on layer order
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate();
 
@@ -65,7 +68,10 @@ namespace Pizza {
                 layer->OnImGuiRender();
             m_ImGuiLayer->End();
 
+            // With input Polling, we can do things like:
+            //PZ_CORE_TRACE("Is Key K pressed? {0}", Input::IsKeyDown(75));
 
+            // Render Logic
             m_Window->OnUpdate();
         }
     }
