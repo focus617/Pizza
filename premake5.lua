@@ -44,7 +44,7 @@ project "Pizza"
 		"%{prj.name}/vendor/glm/glm/**.inl"
     }
 
-    	defines
+    defines
 	{
 		"_CRT_SECURE_NO_WARNINGS"
 	}
