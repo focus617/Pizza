@@ -18,10 +18,13 @@ IncludeDir["Glad"] = "Pizza/vendor/Glad/include"
 IncludeDir["ImGui"] = "Pizza/vendor/imgui"
 IncludeDir["glm"] = "Pizza/vendor/glm"
 
--- Include submodule's premake file
-include "Pizza/vendor/GLFW"
-include "Pizza/vendor/Glad"
-include "Pizza/vendor/imgui"
+-- submodule's premake file
+group "Dependencies"
+    include "Pizza/vendor/GLFW"
+    include "Pizza/vendor/Glad"
+    include "Pizza/vendor/imgui"
+
+group ""
 
 project "Pizza"
     location "Pizza"
