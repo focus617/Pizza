@@ -17,7 +17,7 @@ namespace Pizza {
 	{
 	public:
 		Application();
-		~Application();
+		~Application() = default;
 
 		void Run();
 

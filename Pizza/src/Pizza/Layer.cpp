@@ -8,9 +8,4 @@ namespace Pizza {
 	{
 	}
 
-	Layer::~Layer()
-	{
-
-	}
-
 }
