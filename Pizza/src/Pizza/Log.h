@@ -27,12 +27,12 @@ namespace Pizza {
 #define PZ_CORE_INFO(...)    ::Pizza::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define PZ_CORE_WARN(...)    ::Pizza::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define PZ_CORE_ERROR(...)   ::Pizza::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define PZ_CORE_FATAL(...)   ::Pizza::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define PZ_CORE_CRITICAL(...)   ::Pizza::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
 #define PZ_TRACE(...)   ::Pizza::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define PZ_INFO(...)    ::Pizza::Log::GetClientLogger()->info(__VA_ARGS__)
 #define PZ_WARN(...)    ::Pizza::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define PZ_ERROR(...)   ::Pizza::Log::GetClientLogger()->error(__VA_ARGS__)
-#define PZ_FATAL(...)   ::Pizza::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define PZ_CRITICAL(...)   ::Pizza::Log::GetClientLogger()->critical(__VA_ARGS__)
 
