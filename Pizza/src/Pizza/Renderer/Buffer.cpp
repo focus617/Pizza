@@ -11,8 +11,8 @@ namespace Pizza {
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::OpenGL:  return new OpenGLVertexBuffer(vertices, size);
+		case RendererAPI::API::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGL:  return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		PZ_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,8 +23,8 @@ namespace Pizza {
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::OpenGL:  return new OpenGLIndexBuffer(indices, size);
+		case RendererAPI::API::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGL:  return new OpenGLIndexBuffer(indices, size);
 		}
 
 		PZ_CORE_ASSERT(false, "Unknown RendererAPI!");
