@@ -13,6 +13,8 @@
 #include "Pizza/Renderer/Buffer.h"
 #include "Pizza/Renderer/VertexArray.h"
 
+#include "Pizza/Renderer/OrthographicCamera.h"
+
 namespace Pizza {
 
 	class PIZZA_API Application
@@ -40,12 +42,13 @@ namespace Pizza {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		std::unique_ptr<Shader> m_Shader;
+		std::shared_ptr<Shader> m_Shader;
 		std::shared_ptr<VertexArray> m_VertexArray;
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
 
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
