@@ -7,13 +7,10 @@
 #include "Pizza/Events/Event.h"
 #include "Pizza/Events/ApplicationEvent.h"
 
+#include "Pizza/Core/Timestep.h"
+
 #include "Pizza/ImGui/ImGuiLayer.h"
 
-#include "Pizza/Renderer/Shader.h"
-#include "Pizza/Renderer/Buffer.h"
-#include "Pizza/Renderer/VertexArray.h"
-
-#include "Pizza/Renderer/OrthographicCamera.h"
 
 namespace Pizza {
 
@@ -36,19 +33,13 @@ namespace Pizza {
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

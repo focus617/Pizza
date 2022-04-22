@@ -11,6 +11,18 @@
 
 #include "Pizza/ImGui/ImGuiLayer.h"
 
+// ---Renderer------------------------
+#include "Pizza/Renderer/Renderer.h"
+#include "Pizza/Renderer/RenderCommand.h"
+
+#include "Pizza/Renderer/Buffer.h"
+#include "Pizza/Renderer/Shader.h"
+#include "Pizza/Renderer/VertexArray.h"
+
+#include "Pizza/Renderer/OrthographicCamera.h"
+
+// -----------------------------------
+
 // ---------Entry Point----------------
 #include "Pizza/EntryPoint.h"
 
