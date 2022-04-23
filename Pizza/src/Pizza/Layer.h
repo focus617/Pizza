@@ -14,7 +14,7 @@ namespace Pizza {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate(Timestep ts) {}				// 负责更新Layer
+		virtual void OnUpdate(Timestep ts) {}	// 负责更新Layer
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}	// 负责接收事件，并完成对应的转发
 

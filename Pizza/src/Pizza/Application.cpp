@@ -53,6 +53,11 @@ namespace Pizza {
     {
         while (m_Running)
         {
+            // 全平台通用的封装的API, OpenGL上就是glfwGetTime();
+		    // 虽然不同机器执行一次Loop函数的用时不同，但只要把每一帧里的运动，
+            // 跟该帧所经历的时间相乘，就能抵消因为帧率导致的数据不一致的问题。
+            // 注意, 这里time - m_LastFrameTIme, 正好算的应该是当前帧所经历的时间, 
+            // 而不是上一帧经历的时间
             float time = (float)glfwGetTime();
             Timestep timestep = time - m_LastFrameTime;
             m_LastFrameTime = time;
@@ -64,9 +69,6 @@ namespace Pizza {
             for (Layer* layer : m_LayerStack)
                 layer->OnImGuiRender();
             m_ImGuiLayer->End();
-
-            // With input Polling, we can do things like:
-            //PZ_CORE_TRACE("Is Key K pressed? {0}", Input::IsKeyDown(75));
 
             // Render Logic
             m_Window->OnUpdate();
