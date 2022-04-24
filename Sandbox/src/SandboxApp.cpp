@@ -22,7 +22,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Pizza::VertexBuffer> vertexBuffer;
+		Pizza::Ref<Pizza::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Pizza::VertexBuffer::Create(vertices, sizeof(vertices)));
 		Pizza::BufferLayout layout = {
 			{ Pizza::ShaderDataType::Float3, "a_Position" },
@@ -32,7 +32,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Pizza::IndexBuffer> indexBuffer;
+		Pizza::Ref<Pizza::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Pizza::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -45,7 +45,7 @@ public:
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<Pizza::VertexBuffer> squareVB;
+		Pizza::Ref<Pizza::VertexBuffer> squareVB;
 		squareVB.reset(Pizza::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Pizza::ShaderDataType::Float3, "a_Position" }
@@ -53,7 +53,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Pizza::IndexBuffer> squareIB;
+		Pizza::Ref<Pizza::IndexBuffer> squareIB;
 		squareIB.reset(Pizza::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -187,11 +187,11 @@ public:
 
     }
 private:
-    std::shared_ptr<Pizza::Shader> m_Shader;
-    std::shared_ptr<Pizza::VertexArray> m_VertexArray;
+    Pizza::Ref<Pizza::Shader> m_Shader;
+    Pizza::Ref<Pizza::VertexArray> m_VertexArray;
 
-    std::shared_ptr<Pizza::Shader> m_FlatColorShader;
-    std::shared_ptr<Pizza::VertexArray> m_SquareVA;
+    Pizza::Ref<Pizza::Shader> m_FlatColorShader;
+    Pizza::Ref<Pizza::VertexArray> m_SquareVA;
 
     Pizza::OrthographicCamera m_Camera;
     glm::vec3 m_CameraPosition;
