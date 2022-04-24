@@ -5,6 +5,8 @@
 #include "Pizza/Layer.h"
 #include "Pizza/Log.h"
 
+#include "Pizza/Core/Timestep.h"
+
 #include "Pizza/Input.h"
 #include "Pizza/KeyCodes.h"
 #include "Pizza/MouseButtonCodes.h"
@@ -17,6 +19,7 @@
 
 #include "Pizza/Renderer/Buffer.h"
 #include "Pizza/Renderer/Shader.h"
+#include "Pizza/Renderer/Texture.h"
 #include "Pizza/Renderer/VertexArray.h"
 
 #include "Pizza/Renderer/OrthographicCamera.h"

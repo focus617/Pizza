@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Pizza/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pizza/vendor/Glad/include"
 IncludeDir["ImGui"] = "Pizza/vendor/imgui"
 IncludeDir["glm"] = "Pizza/vendor/glm"
+IncludeDir["stb_image"] = "Pizza/vendor/stb_image"
 
 -- submodule's premake file
 group "Dependencies"
@@ -43,6 +44,8 @@ project "Pizza"
     {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp" ,
+        "%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
         "%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
     }
@@ -59,7 +62,8 @@ project "Pizza"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+        "%{IncludeDir.stb_image}"
     }
 
     links 
