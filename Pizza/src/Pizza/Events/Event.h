@@ -72,8 +72,9 @@ namespace Pizza {
 
         // Make a template function to Dispatch the event
         // The input parameter is a Function
-        template<typename T>
-        bool Dispatch(EventFn<T> func)
+        // F will be deduced by the compiler
+        template<typename T, typename F>
+        bool Dispatch(const F& func)
         {
             // Check if the Event Type of the Event bond to this dispatcher
             // matches with the function we are using.
@@ -83,7 +84,7 @@ namespace Pizza {
             {
                 // Whatever it is, this certain function of this Event will be called,
                 // And the function will decide whether to consume the event or not.
-                m_Event.Handled = func(*(T*)&m_Event);
+                m_Event.Handled = func(static_cast<T&>(m_Event));
                 return true;
             }
             return false;
