@@ -57,11 +57,6 @@ namespace Pizza {
 
     class EventDispatcher
     {
-        // Define EventFunc() Template
-        // With T& input and return bool
-        template<typename T>
-        using EventFn = std::function<bool(T&)>;
-
     public:
         // Bind the event to this Dispatcher,
         // Each Dispatcher can only Dispatch 1 Event
