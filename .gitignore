@@ -362,20 +362,24 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# Directories
-.vs/
-/bin/
+# Binaries Directories
+**/bin/
 bin-int/
 /Pizza/vendor/imgui
+!vendor/bin/premake/
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
 
 # Files
 *.user
 *.recipe
 *.txt
 *.idb
-*.sln
-*.vcxproj
-*.filters
 
 
 
