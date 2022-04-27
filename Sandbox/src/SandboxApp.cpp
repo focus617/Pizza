@@ -1,4 +1,5 @@
 #include <Pizza.h>
+#include <Pizza/Core/EntryPoint.h>
 
 #include "Platform/OpenGL/OpenGLShader.h"
 
@@ -7,6 +8,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "Sandbox2D.h"
 
 class ExampleLayer : public Pizza::Layer
 {
@@ -14,7 +16,7 @@ public:
     ExampleLayer()
 		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
-		m_VertexArray.reset(Pizza::VertexArray::Create());
+		m_VertexArray = Pizza::VertexArray::Create();
 
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, 0.0f, 0.8f, 0.2f, 0.8f, 1.0f,
@@ -36,7 +38,7 @@ public:
 		indexBuffer.reset(Pizza::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
-		m_SquareVA.reset(Pizza::VertexArray::Create());
+		m_SquareVA = Pizza::VertexArray::Create();
 
 		float squareVertices[5 * 4] = {
 			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
@@ -212,10 +214,11 @@ private:
 class Sandbox : public Pizza::Application
 {
 public:
-    Sandbox()
-    {
-        PushLayer(new ExampleLayer());
-    }
+	Sandbox()
+	{
+		// PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
+	}
 
     ~Sandbox()
     {

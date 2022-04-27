@@ -1,6 +1,7 @@
 #pragma once
 
 // For use by Pizza applications
+
 #include "Pizza/Core/Application.h"
 #include "Pizza/Core/Layer.h"
 #include "Pizza/Core/Log.h"
@@ -26,8 +27,3 @@
 #include "Pizza/Renderer/OrthographicCamera.h"
 
 // -----------------------------------
-
-// ---------Entry Point----------------
-#include "Pizza/Core/EntryPoint.h"
-
-// ------------------------------------
