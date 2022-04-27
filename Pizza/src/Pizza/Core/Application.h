@@ -3,7 +3,7 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "Pizza/LayerStack.h"
+#include "LayerStack.h"
 #include "Pizza/Events/Event.h"
 #include "Pizza/Events/ApplicationEvent.h"
 

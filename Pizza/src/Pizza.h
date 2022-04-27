@@ -1,16 +1,16 @@
 #pragma once
 
 // For use by Pizza applications
-#include "Pizza/Application.h"
-#include "Pizza/Layer.h"
-#include "Pizza/Log.h"
+#include "Pizza/Core/Application.h"
+#include "Pizza/Core/Layer.h"
+#include "Pizza/Core/Log.h"
 
 #include "Pizza/Core/Timestep.h"
 
-#include "Pizza/Input.h"
-#include "Pizza/KeyCodes.h"
-#include "Pizza/MouseButtonCodes.h"
-#include "Pizza/OrthographicCameraController.h"
+#include "Pizza/Core/Input.h"
+#include "Pizza/Core/KeyCodes.h"
+#include "Pizza/Core/MouseButtonCodes.h"
+#include "Pizza/Renderer/OrthographicCameraController.h"
 
 #include "Pizza/ImGui/ImGuiLayer.h"
 
@@ -28,6 +28,6 @@
 // -----------------------------------
 
 // ---------Entry Point----------------
-#include "Pizza/EntryPoint.h"
+#include "Pizza/Core/EntryPoint.h"
 
 // ------------------------------------

@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Pizza/Core.h"
+#include "Pizza/Core/Core.h"
 
 namespace Pizza {
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pizza/Core.h"
+#include "Pizza/Core/Core.h"
 #include "Pizza/Core/Timestep.h"
 #include "Pizza/Events/Event.h"
 

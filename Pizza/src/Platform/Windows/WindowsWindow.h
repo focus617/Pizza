@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pizza/Window.h"
+#include "Pizza/Core/Window.h"
 #include "Pizza/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

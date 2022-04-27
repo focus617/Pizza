@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Pizza/Log.h"
+#include "Pizza/Core/Log.h"
 
 #ifdef PZ_PLATFORM_WINDOWS
 	#include <Windows.h>

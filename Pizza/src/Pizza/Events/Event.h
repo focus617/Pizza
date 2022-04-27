@@ -1,9 +1,7 @@
 #pragma once
 
-#include "Pizza/Core.h"
-
-#include <string>
-#include <functional>
+#include "pzpch.h"
+#include "Pizza/Core/Core.h"
 
 namespace Pizza {
 

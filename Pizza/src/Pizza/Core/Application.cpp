@@ -1,11 +1,11 @@
 #include "pzpch.h"
 #include "Application.h"
 
-#include "Pizza/Log.h"
+#include "Log.h"
 
 #include "Pizza/Renderer/Renderer.h"
 
-#include "Pizza/Input.h"
+#include "Input.h"
 
 #include <glfw/glfw3.h>
 

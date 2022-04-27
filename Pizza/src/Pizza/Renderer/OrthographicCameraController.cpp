@@ -1,8 +1,8 @@
 #include "pzpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Pizza/Input.h"
-#include "Pizza/KeyCodes.h"
+#include "Pizza/Core/Input.h"
+#include "Pizza/Core/KeyCodes.h"
 
 namespace Pizza {
 

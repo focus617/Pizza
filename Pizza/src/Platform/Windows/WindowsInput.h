@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pizza/Input.h"
+#include "Pizza/Core/Input.h"
 
 namespace Pizza {
 

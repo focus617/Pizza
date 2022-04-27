@@ -1,7 +1,7 @@
 #include "pzpch.h"
 #include "WindowsInput.h"
 
-#include "Pizza/Application.h"
+#include "Pizza/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Pizza {
