@@ -84,7 +84,6 @@ project "Pizza"
 
         defines
         {
-            "PZ_PLATFORM_WINDOWS",
             "PZ_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
         }
@@ -136,12 +135,6 @@ project "Sandbox"
 
     filter "system:windows"
         systemversion "latest"
-
-        defines
-        {
-            "PZ_PLATFORM_WINDOWS"
-        }
-
 
     filter "configurations:Debug"
         defines "PZ_DEBUG"
