@@ -17,6 +17,7 @@
 
 // ---Renderer------------------------
 #include "Pizza/Renderer/Renderer.h"
+#include "Pizza/Renderer/Renderer2D.h"
 #include "Pizza/Renderer/RenderCommand.h"
 
 #include "Pizza/Renderer/Buffer.h"
