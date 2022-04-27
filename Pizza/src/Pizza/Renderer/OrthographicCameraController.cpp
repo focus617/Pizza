@@ -39,7 +39,7 @@ namespace Pizza {
 		{
 			if (Input::IsKeyPressed(PZ_KEY_Q))
 				m_CameraRotation += m_CameraRotationSpeed * ts;
-			if (Input::IsKeyPressed(PZ_KEY_E))e
+			if (Input::IsKeyPressed(PZ_KEY_E))
 				m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 			if (m_CameraRotation > 180.0f)
