@@ -52,8 +52,9 @@ namespace Pizza {
         }
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-        
-        m_Context = new OpenGLContext(m_Window);
+       
+        m_Context = CreateScope<OpenGLContext>(m_Window);
+
         m_Context->Init();
 
         //本质上是绑定了一个用户自定义的指针到window，签名里是个void*，根据文档，这就是
