@@ -26,7 +26,7 @@ namespace Pizza {
 	 * This is a platform independent, abstract window representation
 	 * Each platform will implement it via concrete subclass 
 	 */
-	class PIZZA_API Window
+	class Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
@@ -45,7 +45,7 @@ namespace Pizza {
 
 		virtual void* GetNativeWindow() const = 0;
 
-		static Window* Create(const WindowProps& props = WindowProps());
+		static Scope<Window> Create(const WindowProps& props = WindowProps());
 	};
 
 }

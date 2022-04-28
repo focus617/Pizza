@@ -1,6 +1,7 @@
 #pragma once
 
 #include "pzpch.h"
+
 #include "Pizza/Core/Core.h"
 
 namespace Pizza {
@@ -36,7 +37,7 @@ namespace Pizza {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-    class PIZZA_API Event
+    class Event
     {
     public:
         bool Handled = false;

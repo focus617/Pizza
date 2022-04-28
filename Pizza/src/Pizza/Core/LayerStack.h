@@ -1,16 +1,16 @@
 #pragma once
 
 #include "Pizza/Core/Core.h"
-#include "Layer.h"
+#include "Pizza/Core/Layer.h"
 
 #include <vector>
 
 namespace Pizza {
 
-	class PIZZA_API LayerStack
+	class LayerStack
 	{
 	public:
-		LayerStack();
+		LayerStack() = default;
 		~LayerStack();
 
 		void PushLayer(Layer* layer);

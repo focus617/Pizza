@@ -1,8 +1,8 @@
 #pragma once
 
-#include "OrthographicCamera.h"
+#include "Pizza/Renderer/OrthographicCamera.h"
 
-#include "Texture.h"
+#include "Pizza/Renderer/Texture.h"
 
 namespace Pizza {
 

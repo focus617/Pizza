@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Pizza/Core/Core.h"
+
 #ifdef PZ_PLATFORM_WINDOWS
 
 extern Pizza::Application* Pizza::CreateApplication();

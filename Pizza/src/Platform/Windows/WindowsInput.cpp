@@ -1,5 +1,5 @@
 #include "pzpch.h"
-#include "WindowsInput.h"
+#include "Platform/Windows/WindowsInput.h"
 
 #include "Pizza/Core/Application.h"
 #include <GLFW/glfw3.h>

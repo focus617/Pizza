@@ -1,7 +1,7 @@
 #include "pzpch.h"
-#include "VertexArray.h"
+#include "Pizza/Renderer/VertexArray.h"
 
-#include "Renderer.h"
+#include "Pizza/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLVertexArray.h"
 
 namespace Pizza {
@@ -11,7 +11,7 @@ namespace Pizza {
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::OpenGL:  return std::make_shared<OpenGLVertexArray>();
+			case RendererAPI::API::OpenGL:  return CreateRef<OpenGLVertexArray>();
 		}
 
 		PZ_CORE_ASSERT(false, "Unknown RendererAPI!");

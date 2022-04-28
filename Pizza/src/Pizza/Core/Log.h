@@ -1,12 +1,13 @@
 #pragma once
 
-#include "Core.h"
-#include "spdlog/spdlog.h"
-#include "spdlog/fmt/ostr.h"
+#include "Pizza/Core/Core.h"
+
+#include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
 
 namespace Pizza {
 
-	class PIZZA_API Log
+	class Log
 	{
 	public:
 		static void Init();
