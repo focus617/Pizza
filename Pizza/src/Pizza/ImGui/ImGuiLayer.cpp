@@ -32,6 +32,8 @@ namespace Pizza {
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons;
 		//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;
 
+		io.FontDefault = io.Fonts->AddFontFromFileTTF("assets/fonts/opensans/OpenSans-Regular.ttf", 28.0f);
+
 		//设置一下主题风格
 		ImGui::StyleColorsDark();
 		//ImGui::StyleColorsClassic();
