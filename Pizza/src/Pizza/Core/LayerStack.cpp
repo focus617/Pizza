@@ -1,11 +1,7 @@
 #include "pzpch.h"
-#include "LayerStack.h"
+#include "Pizza/Core/LayerStack.h"
 
 namespace Pizza {
-
-	LayerStack::LayerStack()
-	{
-	}
 
 	LayerStack::~LayerStack()
 	{

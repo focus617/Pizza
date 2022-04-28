@@ -1,5 +1,5 @@
 #include "pzpch.h"
-#include "OrthographicCameraController.h"
+#include "Pizza/Renderer/OrthographicCameraController.h"
 
 #include "Pizza/Core/Input.h"
 #include "Pizza/Core/KeyCodes.h"

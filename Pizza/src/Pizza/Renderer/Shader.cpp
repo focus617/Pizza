@@ -1,7 +1,7 @@
 #include "pzpch.h"
-#include "Shader.h"
+#include "Pizza/Renderer/Shader.h"
 
-#include "Renderer.h"
+#include "Pizza/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLShader.h"
 
 namespace Pizza {
@@ -11,7 +11,7 @@ namespace Pizza {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:  return std::make_shared <OpenGLShader>(filepath);
+		case RendererAPI::API::OpenGL:  return CreateRef<OpenGLShader>(filepath);
 		}
 
 		PZ_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,7 +23,7 @@ namespace Pizza {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    PZ_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::OpenGL:  return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);
+		case RendererAPI::API::OpenGL:  return CreateRef<OpenGLShader>(name, vertexSrc, fragmentSrc);
 		}
 
 		PZ_CORE_ASSERT(false, "Unknown RendererAPI!");

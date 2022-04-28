@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Core.h"
+#include "Pizza/Core/Core.h"
 
-#include "Window.h"
-#include "LayerStack.h"
+#include "Pizza/Core/Window.h"
+#include "Pizza/Core/LayerStack.h"
 #include "Pizza/Events/Event.h"
 #include "Pizza/Events/ApplicationEvent.h"
 
@@ -14,11 +14,11 @@
 
 namespace Pizza {
 
-	class PIZZA_API Application
+	class Application
 	{
 	public:
 		Application();
-		~Application() = default;
+		virtual ~Application();
 
 		void Run();
 

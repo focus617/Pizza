@@ -1,7 +1,7 @@
 #include "pzpch.h"
-#include "Texture.h"
+#include "Pizza/Renderer/Texture.h"
 
-#include "Renderer.h"
+#include "Pizza/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 namespace Pizza {

@@ -44,22 +44,6 @@
 #endif // End of platform detection
 
 
-// DLL support
-#ifdef PZ_PLATFORM_WINDOWS
-	#if PZ_DYNAMIC_LINK
-		#ifdef PZ_BUILD_DLL
-			#define PIZZA_API __declspec(dllexport)
-		#else
-			#define PIZZA_API __declspec(dllimport)
-		#endif
-	#else
-		#define PIZZA_API
-	#endif
-#else
-	#error Pizza only supports Windows!
-#endif // End of DLL support
-
-
 #ifdef PZ_DEBUG
 #define PZ_ENABLE_ASSERTS
 #endif

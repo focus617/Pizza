@@ -10,7 +10,7 @@ namespace Pizza {
 	* 所有的protected函数都是纯虚函数/抽象函数，这也意味着派生类必须根据平台做不同的实现。
 	* 而高层逻辑在调用时，则不用考虑具体实现，直接从这里调用静态函数即可。
 	*/
-	class PIZZA_API Input
+	class Input
 	{
 	protected:
 		Input() = default;

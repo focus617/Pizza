@@ -2,6 +2,8 @@
 
 // For use by Pizza applications
 
+#include "Pizza/Core/Core.h"
+
 #include "Pizza/Core/Application.h"
 #include "Pizza/Core/Layer.h"
 #include "Pizza/Core/Log.h"
