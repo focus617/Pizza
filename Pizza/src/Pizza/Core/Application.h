@@ -11,6 +11,7 @@
 
 #include "Pizza/ImGui/ImGuiLayer.h"
 
+int main(int argc, char** argv);
 
 namespace Pizza {
 
@@ -19,8 +20,6 @@ namespace Pizza {
 	public:
 		Application();
 		virtual ~Application();
-
-		void Run();
 
 		void OnEvent(Event& e);
 
@@ -32,6 +31,7 @@ namespace Pizza {
 		inline static Application& Get() { return *s_Instance; }
 
 	private:
+		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 	private:
@@ -44,6 +44,7 @@ namespace Pizza {
 
 	private:
 		static Application* s_Instance;
+		friend int ::main(int argc, char** argv);
 	};
 
 	// To be defined in CLIENT
