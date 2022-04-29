@@ -11,17 +11,17 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
+	PZ_PROFILE_FUNCTION();
 	m_CheckerboardTexture = Pizza::Texture2D::Create("assets/textures/Checkerboard.png");
 }
 
 void Sandbox2D::OnDetach()
 {
+	PZ_PROFILE_FUNCTION();
 }
 
 void Sandbox2D::OnUpdate(Pizza::Timestep ts)
 {
-	PZ_PROFILE_FUNCTION();
-
 	// Update
 	{
 		PZ_PROFILE_SCOPE("CameraController::OnUpdate");
