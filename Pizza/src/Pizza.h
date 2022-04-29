@@ -12,7 +12,7 @@
 
 #include "Pizza/Core/Input.h"
 #include "Pizza/Core/KeyCodes.h"
-#include "Pizza/Core/MouseButtonCodes.h"
+#include "Pizza/Core/MouseCodes.h"
 #include "Pizza/Renderer/OrthographicCameraController.h"
 
 #include "Pizza/ImGui/ImGuiLayer.h"
