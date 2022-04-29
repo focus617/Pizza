@@ -383,3 +383,6 @@ bin-int/
 
 
 
+/Sandbox/HazelProfile-Runtime.json
+/Sandbox/HazelProfile-Shutdown.json
+/Sandbox/HazelProfile-Startup.json

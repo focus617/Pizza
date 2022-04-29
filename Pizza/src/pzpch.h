@@ -15,6 +15,8 @@
 
 #include "Pizza/Core/Log.h"
 
+#include "Pizza/Debug/Instrumentor.h"
+
 #ifdef PZ_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
